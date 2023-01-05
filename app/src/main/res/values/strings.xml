@@ -52,5 +52,7 @@
     <string name="dana_pay">DANA</string>
     <string name="shopee_pay">ShopeePay</string>
     <string name="gopay_pay">GoPay</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

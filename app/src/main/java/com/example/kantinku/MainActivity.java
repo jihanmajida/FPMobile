@@ -2,16 +2,38 @@ package com.example.kantinku;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+    private Button btnRegis;
+    private EditText etNama, etNoHp, etMail, etPass, etKonfirm;
 
+    @SuppressLint("MissingInflateID")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btnRegis = findViewById(R.id.btnRegis);
+        etNama = findViewById(R.id.etNama);
+        etNoHp = findViewById(R.id.etNoHp);
+        etMail = findViewById(R.id.etMail);
+        etPass = findViewById(R.id.etPass);
+        etKonfirm = findViewById(R.id.etkonfirm);
+
+        btnRegis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent homeIntent = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(homeIntent);
+            }
+        });
+
     }
 
 
