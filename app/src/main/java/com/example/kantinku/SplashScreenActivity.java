@@ -8,7 +8,9 @@ import android.os.Handler;
 import android.util.Log;
 
 public class SplashScreenActivity extends AppCompatActivity {
+    
     public static final String TAG="KantinKu";
+    private int splashInterval = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +20,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(SplashScreenActivity.this,MainActivity.class));
             }
         }, splashInterval);
 

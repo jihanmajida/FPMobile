@@ -14,10 +14,5 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void OpenHome(View view) {
-        if (view.getId() == R.id.btnLogin) {
-            Intent moveIntent = new Intent(LoginActivity.this, HomeActivity.class);
-            startActivity(moveIntent);
-        }
-    }
+
 }

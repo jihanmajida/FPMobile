@@ -5,13 +5,20 @@
       <map>
         <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/drawable/baseline_arrow_back_black_24dp.xml" value="0.2155" />
         <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/activity_booking.xml" value="0.209375" />
+        <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/activity_cart.xml" value="0.209375" />
+        <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/activity_detailpayment.xml" value="0.209375" />
         <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/activity_home.xml" value="0.209375" />
         <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/activity_login.xml" value="0.209375" />
         <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/activity_order_succes.xml" value="0.209375" />
-        <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/activity_payment.xml" value="0.209375" />
+        <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/activity_payment.xml" value="0.1" />
         <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/activity_profile.xml" value="0.209375" />
         <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/activity_splash_screen.xml" value="0.209375" />
+        <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/fragment_booking.xml" value="0.209375" />
+        <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/fragment_home.xml" value="0.20833333333333334" />
+        <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/fragment_order_success.xml" value="0.22" />
+        <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/fragment_payment.xml" value="0.33" />
+        <entry key="..\:/D3MI01/Semester 3/MP II/Final-Project-MP2-main/app/src/main/res/layout/fragment_profile.xml" value="0.209375" />
         <entry key="..\:/KantinKu/app/src/main/res/layout/activity_booking.xml" value="0.25" />
         <entry key="..\:/KantinKu/app/src/main/res/layout/activity_home.xml" value="0.22" />
         <entry key="..\:/KantinKu/app/src/main/res/layout/activity_login.xml" value="0.17074275362318841" />
