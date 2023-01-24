@@ -18,9 +18,10 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        Intent home = getIntent();
+
         bottomNavigationView = findViewById(R.id.bottomnav);
         bottomNavigationView.setOnItemSelectedListener(item -> {
-
             switch (item.getItemId()){
                 case R.id.home:
                     setContentView(R.layout.fragment_home);
@@ -37,20 +38,6 @@ public class HomeActivity extends AppCompatActivity {
                     break;
             }
 
-//            switch (item.getItemId()) {
-//                case R.id.home:
-//                    setContentView(R.layout.activity_home);
-//                    break;
-//                case R.id.booking:
-//                    startActivity(new Intent(this, BookingActivity.class));
-//                    break;
-//                case R.id.payment:
-//                    setContentView(R.layout.activity_payment);
-//                    break;
-//                case R.id.profile:
-//                    setContentView(R.layout.activity_profile);
-//                    break;
-//            }
             return true;
         });
     }

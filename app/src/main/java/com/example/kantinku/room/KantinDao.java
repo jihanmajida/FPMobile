@@ -6,15 +6,16 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Dao
 public interface KantinDao {
-    @Query("SELECT *FROM kantinku")
+    @Query("SELECT *FROM user")
     List<KantinKu> getAll();
 
-    @Query("SELECT *FROM kantinku WHERE nama LIKE :nama")
-    KantinKu findByName (String nama);
+    @Query("SELECT *FROM user  WHERE eMail LIKE :email and password = :password")
+    KantinKu kantinKu(String email, String password);
 
     @Insert
     void insertAll (KantinKu kantinku);
@@ -27,4 +28,5 @@ public interface KantinDao {
 
     @Delete
     public void deleteAll (KantinKu user1, KantinKu user2);
+
 }

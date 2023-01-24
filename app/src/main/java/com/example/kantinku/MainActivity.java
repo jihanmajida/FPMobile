@@ -1,7 +1,5 @@
 package com.example.kantinku;
 
-import static com.example.kantinku.AppApplication.db;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -12,12 +10,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.kantinku.room.AppDatabase;
 import com.example.kantinku.room.KantinKu;
 
 public class MainActivity extends AppCompatActivity {
     private Button btnRegis;
     private EditText etNama, etNoHp, etMail, etPass, etKonfirm;
-    KantinKu kantinKu;
+
+    AppDatabase db;
+    KantinKu model;
 
     @SuppressLint("MissingInflateID")
     @Override
@@ -35,17 +36,23 @@ public class MainActivity extends AppCompatActivity {
         btnRegis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!etNama.getText().toString().isEmpty()&&!etPass.getText().toString().isEmpty()&&
-                !etMail.getText().toString().isEmpty()&&!etNoHp.getText().toString().isEmpty()&&!etKonfirm.getText().toString().isEmpty()) {
+                String nama = etNama.getText().toString().trim();
+                String noHp = etNoHp.getText().toString().trim();
+                String email = etMail.getText().toString().trim();
+                String password = etPass.getText().toString().trim();
+                String konfirm = etKonfirm.getText().toString().trim();
 
-                    kantinKu = new KantinKu();
-                    kantinKu.setNama(etNama.getText().toString());
-                    kantinKu.seteMail(etMail.getText().toString());
-                    kantinKu.setPass(etPass.getText().toString());
-                    kantinKu.setNoHp(etNoHp.getText().toString());
-                    kantinKu.setKonfirm(etKonfirm.getText().toString());
+                if (password.equals(konfirm)) {
+                    db = AppDatabase.getDbInstance(getApplicationContext());
 
-                    db.userDao().insertAll(kantinKu);
+                    model = new KantinKu();
+                    model.setNama(nama);
+                    model.setNoHp(noHp);
+                    model.seteMail(email);
+                    model.setPass(password);
+                    model.setKonfirm(konfirm);
+
+                    db.userDao().insertAll(model);
                     startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 }
                 else{
